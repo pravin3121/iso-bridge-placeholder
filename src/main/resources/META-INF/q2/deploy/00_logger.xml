@@ -1,0 +1,11 @@
+<logger name="Q2" class="org.jpos.q2.qbean.LoggerAdaptor">
+  <log-listener class="org.jpos.util.ProtectedLogListener">
+    <!-- <property name="protect" value="2 14 34 35 45 111.2 111.14 111.35 111.45" /> -->
+    <property name="wipe"    value="52 55" />
+  </log-listener>
+  <log-listener class="org.jpos.util.SimpleLogListener" />
+  <log-listener class="org.jpos.util.DailyLogListener">
+    <property name="prefix" value="log/q2" />
+    <property name="date-format" value="-yyyy-MM-dd-HH"/>
+  </log-listener>
+</logger>
