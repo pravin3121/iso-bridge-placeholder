@@ -3,6 +3,7 @@ package com.example;
 import org.jpos.q2.Q2;
 
 import java.io.File;
+import java.nio.file.Files;
 
 public class ISOBridgeApplicationRunner {
 
@@ -26,8 +27,11 @@ public class ISOBridgeApplicationRunner {
 
 	private static void mkdirs(String dirPath) throws  Exception{
 		File dir = new File(dirPath);
-		if(!dir.mkdirs()) {
-			throw new Exception("Could not create directory "+dir.getAbsolutePath());
+		if(Files.notExists(dir.toPath())) {
+			if(!dir.mkdirs()) {
+				throw new Exception("Could not create directory "+dir.getAbsolutePath());
+			}
 		}
+
 	}
 }
