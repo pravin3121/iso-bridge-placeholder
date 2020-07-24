@@ -1,5 +1,5 @@
 <txnmgr class="org.jpos.transaction.TransactionManager" logger="Q2">
     <property name="queue" value="TXNMGR"/>
     <property name="sessions" value="${txnsession}"/>
-    <property name="sessions" value="${txnmaxsession}"/>
+    <property name="max-sessions" value="${txnmaxsession}"/>
 </txnmgr>
